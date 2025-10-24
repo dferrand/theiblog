@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The i blog</title>
+    <link>https://thei-blog/tags/</link>
+    <description>Recent content in Tags on The i blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Oct 2025 18:12:54 -0400</lastBuildDate>
+    <atom:link href="https://thei-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filesystems</title>
+      <link>https://thei-blog/tags/filesystems/</link>
+      <pubDate>Thu, 23 Oct 2025 18:12:54 -0400</pubDate>
+      <guid>https://thei-blog/tags/filesystems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ibmi</title>
+      <link>https://thei-blog/tags/ibmi/</link>
+      <pubDate>Thu, 23 Oct 2025 18:12:54 -0400</pubDate>
+      <guid>https://thei-blog/tags/ibmi/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

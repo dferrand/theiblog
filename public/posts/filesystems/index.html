@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Filesystems :: The i blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The IBM i filesystems" />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://thei-blog/posts/filesystems/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://thei-blog/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+<link rel="stylesheet" href="https://thei-blog/terminal.css">
+
+
+
+
+<link rel="shortcut icon" href="https://thei-blog/favicon.png">
+<link rel="apple-touch-icon" href="https://thei-blog/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Filesystems">
+<meta property="og:description" content="The IBM i filesystems" />
+<meta property="og:url" content="https://thei-blog/posts/filesystems/" />
+<meta property="og:site_name" content="The i blog" />
+
+  
+  
+  <meta property="og:image" content="https://thei-blog/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-10-23 18:12:54 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://thei-blog/">
+  <div class="logo">
+    The i blog
+  </div>
+</a>
+
+    </div>
+    
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://thei-blog/posts/filesystems/">Filesystems</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-10-23</time><span class="post-author">Damien Ferrand</span><span class="post-reading-time">2 min read (347 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://thei-blog/tags/ibmi/">ibmi</a>&nbsp;
+      
+      #<a href="https://thei-blog/tags/filesystems/">filesystems</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="introduction">Introduction<a href="#introduction" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Like most modern operating systems, IBM i relies on multiple filesystems. This
+post will present the local filesystems currently supported.</p>
+<h3 id="library-filesystem-qsyslib">Library filesystem (QSYS.LIB)<a href="#library-filesystem-qsyslib" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>This is generally the most well known and used filesystem.</p>
+<p>It is a non hierarchical filesystem (objects are in a library but a library
+cannot be in a library).</p>
+<p>The library and the object name can be up to 10 characters long. The object type
+can be up to 6 characters long. The filesystem is (mostly) case insensitive.</p>
+<p>The notation is <code>library/object</code> (that was changed from the S/38 notation
+<code>object.library</code>).</p>
+<p>In the IFS, this filesystem is accessible in <code>/QSYS.LIB</code>.</p>
+<h3 id="documents-and-folders-dlos-or-qdls">Documents and folders (DLOs or QDLS)<a href="#documents-and-folders-dlos-or-qdls" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>This is the original hierarchical stream oriented filesystem before the IFS was
+introduced in V3R1.</p>
+<p>It uses the MS-DOS naming convention (up to 8 character name plus 3 characher
+extension all case insensitive).</p>
+<p>The documents are actually stored in the QDOC library (plus QDOCnnn for user
+ASPs).</p>
+<p>While still officially supported by IBM, this filesystem has many limitations
+and poor performances compared to the IFS. Its used is discouraged.</p>
+<p>In the IFS, this filesystem is accessible in <code>/QDLS</code></p>
+<h3 id="root-filesystem-">root filesystem (/)<a href="#root-filesystem-" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Often also called the integrated filesystem. It is a hierarchical filesystem
+very similar to unix filesystems.</p>
+<p>One key difference with most unix filesystems is that the root filesystem is
+case insensitive (you can&rsquo;t have 2 files named Foo and foo in the same
+directory) but it will store a file case when created.</p>
+<p>As the name implies, this filesystem is the root of the IFS (<code>/</code>).</p>
+<h3 id="qopensys-filesystem">QOpensys filesystem<a href="#qopensys-filesystem" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>QOpenSys is almost identical to the root filesystem, notably, QOpenSys is case
+sensitive.</p>
+<p>In the IFS, it is accessible in <code>/QOpenSys</code>.</p>
+<h3 id="optical-filesystem-qopt">Optical filesystem (QOPT)<a href="#optical-filesystem-qopt" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>The optical filesystem is a hierarchical filesystem used to access optical
+media.</p>
+<p>In the IFS, it is accessible in <code>/QOPT</code>.</p>
+<h3 id="user-defined-filesystem-udfs">User defined filesystem (UDFS)<a href="#user-defined-filesystem-udfs" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>User defined filesystems are similar to the root and QOpenSys filesystems but
+can be created in a set ASP or independent ASP.</p>
+<p>They are mounted in an existing directory in the IFS.</p>
+<p>This is all the local filesystems IBM i supports.</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

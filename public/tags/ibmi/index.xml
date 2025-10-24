@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ibmi on The i blog</title>
+    <link>https://thei-blog/tags/ibmi/</link>
+    <description>Recent content in Ibmi on The i blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Oct 2025 18:12:54 -0400</lastBuildDate>
+    <atom:link href="https://thei-blog/tags/ibmi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filesystems</title>
+      <link>https://thei-blog/posts/filesystems/</link>
+      <pubDate>Thu, 23 Oct 2025 18:12:54 -0400</pubDate>
+      <guid>https://thei-blog/posts/filesystems/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Like most modern operating systems, IBM i relies on multiple filesystems. This&#xA;post will present the local filesystems currently supported.&lt;/p&gt;&#xA;&lt;h3 id=&#34;library-filesystem-qsyslib&#34;&gt;Library filesystem (QSYS.LIB)&lt;/h3&gt;&#xA;&lt;p&gt;This is generally the most well known and used filesystem.&lt;/p&gt;&#xA;&lt;p&gt;It is a non hierarchical filesystem (objects are in a library but a library&#xA;cannot be in a library).&lt;/p&gt;&#xA;&lt;p&gt;The library and the object name can be up to 10 characters long. The object type&#xA;can be up to 6 characters long. The filesystem is (mostly) case insensitive.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

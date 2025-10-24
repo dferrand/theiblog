@@ -1,0 +1,14 @@
+baseURL = 'https://thei-blog/'
+languageCode = 'en-us'
+title = 'The i blog'
+theme = 'terminal'
+
+[params]
+  fullWidthTheme = true
+
+[languages]
+  [languages.en]
+  creator = "Damien Ferrand"
+  title = "The i blog"
+  [languages.en.params.logo]
+    logoText = "The i blog"
