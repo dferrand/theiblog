@@ -1,19 +1,19 @@
 +++
-title = "Remote_filesystems"
+title = "IBM i remote filesystems"
 date = "2025-10-24T14:48:22-04:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "Damien Ferrand"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["", ""]
+tags = ["ibmi", "filesystems"]
 keywords = ["ibmi", "filesystems"]
 description = ""
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 +++
 
-Beside the [local filesystems](/content/filesystems), IBM i supports several
+Beside the [local filesystems](/posts/filesystems), IBM i supports several
 remote filesystems allowing access to files not residing on the logical
 partition.
 
