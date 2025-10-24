@@ -1,4 +1,4 @@
-baseURL = 'https://thei-blog/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'The i blog'
 theme = 'terminal'
