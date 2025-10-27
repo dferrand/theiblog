@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Db2 on The i blog</title>
+    <link>http://10.0.0.148:1313/tags/db2/</link>
+    <description>Recent content in Db2 on The i blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Oct 2025 08:00:00 -0400</lastBuildDate>
+    <atom:link href="http://10.0.0.148:1313/tags/db2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How big is my index?</title>
+      <link>http://10.0.0.148:1313/posts/how_big_is_my_index/</link>
+      <pubDate>Mon, 27 Oct 2025 08:00:00 -0400</pubDate>
+      <guid>http://10.0.0.148:1313/posts/how_big_is_my_index/</guid>
+      <description>&lt;p&gt;While most objects on IBM i have a pretty well defined size, indices are a&#xA;different beast.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s consider a table TABLE1 containing 10k lines without any index, the table&#xA;is about 25MB. Let&amp;rsquo;s now create an index called INDEX1. Let&amp;rsquo;s now look at the&#xA;INDEX1 size with &lt;code&gt;DSPOBJD&lt;/code&gt;: &lt;img src=&#34;http://10.0.0.148:1313/posts/how_big_is_my_index/images/first_index_size.png&#34; alt=&#34;First index size&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The actual size of the index is 14MB, the offline is 0 which is normal since the&#xA;index hasn&amp;rsquo;t been saved yet.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

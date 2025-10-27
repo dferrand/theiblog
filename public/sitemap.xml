@@ -2,24 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thei-blog/posts/filesystems/</loc>
+    <loc>http://10.0.0.148:1313/tags/db2/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/posts/how_big_is_my_index/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/tags/ibmi/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/posts/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/tags/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/</loc>
+    <lastmod>2025-10-27T08:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/tags/filesystems/</loc>
+    <lastmod>2025-10-24T14:48:22-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/posts/remote_filesystems/</loc>
+    <lastmod>2025-10-24T14:48:22-04:00</lastmod>
+  </url><url>
+    <loc>http://10.0.0.148:1313/posts/filesystems/</loc>
     <lastmod>2025-10-23T18:12:54-04:00</lastmod>
   </url><url>
-    <loc>https://thei-blog/tags/filesystems/</loc>
-    <lastmod>2025-10-23T18:12:54-04:00</lastmod>
-  </url><url>
-    <loc>https://thei-blog/tags/ibmi/</loc>
-    <lastmod>2025-10-23T18:12:54-04:00</lastmod>
-  </url><url>
-    <loc>https://thei-blog/posts/</loc>
-    <lastmod>2025-10-23T18:12:54-04:00</lastmod>
-  </url><url>
-    <loc>https://thei-blog/tags/</loc>
-    <lastmod>2025-10-23T18:12:54-04:00</lastmod>
-  </url><url>
-    <loc>https://thei-blog/</loc>
-    <lastmod>2025-10-23T18:12:54-04:00</lastmod>
-  </url><url>
-    <loc>https://thei-blog/categories/</loc>
+    <loc>http://10.0.0.148:1313/categories/</loc>
   </url>
 </urlset>

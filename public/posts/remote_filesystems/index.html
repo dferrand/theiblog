@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>IBM i remote filesystems :: The i blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Presentation of IBM i remote filesystems." />
+<meta name="keywords" content="ibmi, filesystems" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://10.0.0.148:1313/posts/remote_filesystems/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://10.0.0.148:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+<link rel="stylesheet" href="http://10.0.0.148:1313/terminal.css">
+
+
+
+
+<link rel="shortcut icon" href="http://10.0.0.148:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://10.0.0.148:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="IBM i remote filesystems">
+<meta property="og:description" content="Presentation of IBM i remote filesystems." />
+<meta property="og:url" content="http://10.0.0.148:1313/posts/remote_filesystems/" />
+<meta property="og:site_name" content="The i blog" />
+
+  
+  
+  <meta property="og:image" content="http://10.0.0.148:1313/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-10-24 14:48:22 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="http://10.0.0.148:1313/">
+  <div class="logo">
+    The i blog
+  </div>
+</a>
+
+    </div>
+    
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://10.0.0.148:1313/posts/remote_filesystems/">IBM i remote filesystems</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-10-24</time><span class="post-author">Damien Ferrand</span><span class="post-reading-time">3 min read (483 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://10.0.0.148:1313/tags/ibmi/">ibmi</a>&nbsp;
+      
+      #<a href="http://10.0.0.148:1313/tags/filesystems/">filesystems</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Beside the <a href="/posts/filesystems/">local filesystems</a>, IBM i supports several
+remote filesystems allowing access to files not residing on the logical
+partition.</p>
+<h3 id="network-file-system-nfs">Network File System (NFS)<a href="#network-file-system-nfs" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>NFS is the traditional UNIX file sharing protocol.</p>
+<p>There are two NFS versions currently in use: v3 and v4.</p>
+<p>NFSv3, still the most widely used has the following notable characteristics:</p>
+<ul>
+<li>Security is enforced by the client, not by the server, this means that, while
+the server stores permissions, it is the client responsibility to authenticate
+and enforce permissions. This is a very uncommon situation by today&rsquo;s
+standards.</li>
+<li>Multiple TCP and UDP ports are used, some of them dynamically assigned, making
+the protocol difficult to manage in firewalls.</li>
+<li>Data is not encrypted and the protocol doesn&rsquo;t allow encryption (encryption
+can be done through a VPN or tunnel)</li>
+</ul>
+<p>NFSv4, while being more than 20 year old, is still less used than NFSv3, partly
+because its implementation is more complex than NFSv3. It provides the following
+improvements:</p>
+<ul>
+<li>Authentication and authorization is enforced by the server.</li>
+<li>Only one static TCP port is used making it trivial to manage in a firewall.</li>
+<li>Data can be encrypted by the protocol</li>
+</ul>
+<p>To use the NFS client on IBM i, we use the MOUNT command to mount an NFS share
+in the IFS. The files are then used as if they were on the local system.</p>
+<h3 id="netclient-file-system-qntc">NetClient file system (QNTC)<a href="#netclient-file-system-qntc" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>QNTC was used to access files in Integrated xSeries Servers (aka Integrated PC
+Servers aka FSIOP) running Windows, Linux or OS/2. Those are not supported on
+current IBM i release.</p>
+<p>Nowadays, QNTC is used as a SMB client. SMB is the file sharing protocol
+typically used by Microsoft Windows computers. Most UNIX/Linux can serve files
+with the SMB protocol via Samba. IBM i can serve files with this protocol
+through NetServer.</p>
+<p>Authentication can be done through Kerberos if using single sign on, otherwise,
+the IBM i user name and password will be used to authenticate to the SMB server.</p>
+<p>Recent version of SMB (v3), offer encryption. Previous versions didn&rsquo;t allow
+encryption.</p>
+<p>The <code>/QNTC</code> directory in the IFS is used to access SMB servers. Each directory
+in <code>/QNTC</code> will connect to a SMB server with the same name as the directory.
+Directories can be created in <code>/QNTC</code> with the <code>MKDIR</code> command.</p>
+<h3 id="ibm-i-file-server-file-system-qfilesvr400">IBM i file server file system (QFileSvr.400)<a href="#ibm-i-file-server-file-system-qfilesvr400" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>This filesystem allows and IBM i to access another IBM i IFS.</p>
+<p>Like QNTC, authentication can be done through Kerberos is using single sign on
+on both server and client, otherwise, the client user name and password are used
+to authenticate to the SMB server.</p>
+<p>By default, the protocol isn&rsquo;t encrypted but it is possible to setup ssl
+encryption.</p>
+<p>The <code>/QFileSvr.400</code> directory in the IFS is used to access another IBM i IFS.
+Each directory in <code>/QFileSvr.400</code> will connect to an IBM i with the same name as
+the directory. Directories can be created in <code>/QFileSvr.400</code> with the <code>MKDIR</code>
+command.</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

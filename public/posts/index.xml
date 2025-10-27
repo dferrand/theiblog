@@ -2,17 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The i blog</title>
-    <link>https://thei-blog/posts/</link>
+    <link>http://10.0.0.148:1313/posts/</link>
     <description>Recent content in Posts on The i blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Oct 2025 18:12:54 -0400</lastBuildDate>
-    <atom:link href="https://thei-blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Oct 2025 08:00:00 -0400</lastBuildDate>
+    <atom:link href="http://10.0.0.148:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How big is my index?</title>
+      <link>http://10.0.0.148:1313/posts/how_big_is_my_index/</link>
+      <pubDate>Mon, 27 Oct 2025 08:00:00 -0400</pubDate>
+      <guid>http://10.0.0.148:1313/posts/how_big_is_my_index/</guid>
+      <description>&lt;p&gt;While most objects on IBM i have a pretty well defined size, indices are a&#xA;different beast.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s consider a table TABLE1 containing 10k lines without any index, the table&#xA;is about 25MB. Let&amp;rsquo;s now create an index called INDEX1. Let&amp;rsquo;s now look at the&#xA;INDEX1 size with &lt;code&gt;DSPOBJD&lt;/code&gt;: &lt;img src=&#34;http://10.0.0.148:1313/posts/how_big_is_my_index/images/first_index_size.png&#34; alt=&#34;First index size&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The actual size of the index is 14MB, the offline is 0 which is normal since the&#xA;index hasn&amp;rsquo;t been saved yet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IBM i remote filesystems</title>
+      <link>http://10.0.0.148:1313/posts/remote_filesystems/</link>
+      <pubDate>Fri, 24 Oct 2025 14:48:22 -0400</pubDate>
+      <guid>http://10.0.0.148:1313/posts/remote_filesystems/</guid>
+      <description>&lt;p&gt;Beside the &lt;a href=&#34;http://10.0.0.148:1313/posts/filesystems/&#34;&gt;local filesystems&lt;/a&gt;, IBM i supports several&#xA;remote filesystems allowing access to files not residing on the logical&#xA;partition.&lt;/p&gt;&#xA;&lt;h3 id=&#34;network-file-system-nfs&#34;&gt;Network File System (NFS)&lt;/h3&gt;&#xA;&lt;p&gt;NFS is the traditional UNIX file sharing protocol.&lt;/p&gt;&#xA;&lt;p&gt;There are two NFS versions currently in use: v3 and v4.&lt;/p&gt;&#xA;&lt;p&gt;NFSv3, still the most widely used has the following notable characteristics:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Security is enforced by the client, not by the server, this means that, while&#xA;the server stores permissions, it is the client responsibility to authenticate&#xA;and enforce permissions. This is a very uncommon situation by today&amp;rsquo;s&#xA;standards.&lt;/li&gt;&#xA;&lt;li&gt;Multiple TCP and UDP ports are used, some of them dynamically assigned, making&#xA;the protocol difficult to manage in firewalls.&lt;/li&gt;&#xA;&lt;li&gt;Data is not encrypted and the protocol doesn&amp;rsquo;t allow encryption (encryption&#xA;can be done through a VPN or tunnel)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;NFSv4, while being more than 20 year old, is still less used than NFSv3, partly&#xA;because its implementation is more complex than NFSv3. It provides the following&#xA;improvements:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Filesystems</title>
-      <link>https://thei-blog/posts/filesystems/</link>
+      <link>http://10.0.0.148:1313/posts/filesystems/</link>
       <pubDate>Thu, 23 Oct 2025 18:12:54 -0400</pubDate>
-      <guid>https://thei-blog/posts/filesystems/</guid>
+      <guid>http://10.0.0.148:1313/posts/filesystems/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Like most modern operating systems, IBM i relies on multiple filesystems. This&#xA;post will present the local filesystems currently supported.&lt;/p&gt;&#xA;&lt;h3 id=&#34;library-filesystem-qsyslib&#34;&gt;Library filesystem (QSYS.LIB)&lt;/h3&gt;&#xA;&lt;p&gt;This is generally the most well known and used filesystem.&lt;/p&gt;&#xA;&lt;p&gt;It is a non hierarchical filesystem (objects are in a library but a library&#xA;cannot be in a library).&lt;/p&gt;&#xA;&lt;p&gt;The library and the object name can be up to 10 characters long. The object type&#xA;can be up to 6 characters long. The filesystem is (mostly) case insensitive.&lt;/p&gt;</description>
     </item>
   </channel>
