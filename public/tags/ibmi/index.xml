@@ -6,12 +6,19 @@
     <description>Recent content in Ibmi on The i blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Oct 2025 08:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 07:30:00 -0400</lastBuildDate>
     <atom:link href="http://10.0.0.148:1313/tags/ibmi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The *JOBSCD object type</title>
+      <link>http://10.0.0.148:1313/posts/the_jobscd_object_type/</link>
+      <pubDate>Tue, 28 Oct 2025 07:30:00 -0400</pubDate>
+      <guid>http://10.0.0.148:1313/posts/the_jobscd_object_type/</guid>
+      <description>&lt;p&gt;There are many object types we encounter every day while working on IBM i,&#xA;typically *LIB, *FILE, *DTAARA, or *PGM.&lt;/p&gt;&#xA;&lt;p&gt;The *JOBSCD object type is far less common but it has some interesting&#xA;properties. As its name implies, it contains the data of the IBM i integrated&#xA;job scheduler (often called &lt;code&gt;WRKJOBSCDE&lt;/code&gt;). There is always one and only one&#xA;*JOBSCD object on any IBM i system, it is called &lt;code&gt;QDFTJOBSCD&lt;/code&gt; and is located in&#xA;&lt;code&gt;QUSRSYS&lt;/code&gt; library.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How big is my index?</title>
       <link>http://10.0.0.148:1313/posts/how_big_is_my_index/</link>
-      <pubDate>Mon, 27 Oct 2025 08:00:00 -0400</pubDate>
+      <pubDate>Mon, 27 Oct 2025 07:30:00 -0400</pubDate>
       <guid>http://10.0.0.148:1313/posts/how_big_is_my_index/</guid>
       <description>&lt;p&gt;While most objects on IBM i have a pretty well defined size, indices are a&#xA;different beast.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s consider a table TABLE1 containing 10k lines without any index, the table&#xA;is about 25MB. Let&amp;rsquo;s now create an index called INDEX1. Let&amp;rsquo;s now look at the&#xA;INDEX1 size with &lt;code&gt;DSPOBJD&lt;/code&gt;: &lt;img src=&#34;http://10.0.0.148:1313/posts/how_big_is_my_index/images/first_index_size.png&#34; alt=&#34;First index size&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The actual size of the index is 14MB, the offline is 0 which is normal since the&#xA;index hasn&amp;rsquo;t been saved yet.&lt;/p&gt;</description>
     </item>
