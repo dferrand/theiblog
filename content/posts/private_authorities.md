@@ -55,6 +55,8 @@ Authorization lists are restored with the user profiles, therefore, they are ava
 
 Authorization lists reduce management overhead by allowing administrators to manage access rights in groups rather than individually. This makes it easier to keep track of who has access to what and reduces the risk of mismanagement.
 
+If a database file is secured by an authorization list, granting or revoking access does not require locking the object, which is less disruptive in a production environment.
+
 ### Authorization list caveats
 
 Authorization lists are not mutually exclusive with private authorities. While this can be useful to handle special cases, it can also lead to confusion if not managed properly. It's important to have clear policies and procedures in place for managing both authorization lists and private authorities.
