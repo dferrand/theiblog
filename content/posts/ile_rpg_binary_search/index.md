@@ -1,6 +1,6 @@
 +++
 title = "ILE RPG binary search"
-date = "2025-10-30T06:30:00-04:00"
+date = "2025-10-31T06:30:00-04:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "Damien Ferrand"
 cover = ""
