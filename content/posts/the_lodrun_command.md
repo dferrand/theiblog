@@ -38,7 +38,7 @@ The `QINSTAPP` is always called with at least on 10 char parameter containing th
 
 If a save file is used, this parameter will contain `*SAVF` and a second 20 char parameter will contain the name of the save file followed by the library name.
 
-## `QINSTAPP` restrictions
+## QINSTAPP restrictions
 
 The `QINSTAPP` has very few restrictions:
 * The owner of the program on the media must exist on the target system. An IBM supplied user is a good choice.
