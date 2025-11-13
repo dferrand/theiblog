@@ -16,7 +16,7 @@ hideComments = false
 ## Introduction
 
 This is the second part of a serie about single level storage on IBM i:
-* [Part 1](/single_level_storage_1/)
+* [Part 1](/posts/single_level_storage_1/)
 
 In this second part, we will look at how virtual memory Operating Systems work.
 
